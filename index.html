@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>Text To Speech</title>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+
+    <style>
+      #textInput {
+        border: 1px solid #17a2b9;
+        border-radius: 24px;
+        padding: 15px;
+      }
+      #clear {
+        float: right;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="./voices.js"></script>
+    <div class="container  text-center">
+      <span class="display-3">Text to Speech</span>
+      <br />
+      <br />
+
+      <form>
+        <div class="form-group">
+          <label for="textInput">Enter your text here: </label>
+          <textarea class="form-control" id="textInput" rows="3"></textarea>
+        </div>
+        <button type="button" id="clear" class="btn btn-success">Clear</button>
+
+        <select id="voicelist" class="form-control"> </select>
+        <br />
+        <div class="form-group">
+          <button type="button" id="speak" class="btn btn-primary">
+            Speak
+          </button>
+          <button type="button" id="stop" class="btn btn-danger">Stop</button>
+        </div>
+      </form>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
